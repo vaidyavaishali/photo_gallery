@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+html {
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header {
+  width: 90%;
+  height: 15vh;
+  margin: 2em auto 0 auto;
+  background-color: rgb(42, 4, 76);
+  /* border: 1px solid black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+}
+
+.heading {
+  line-height: 3%;
+  font-size: 1em;
+  color: white;
+  margin-top: 12%;
+}
+
+.heading h3 {
+  font-size: 1.4em;
+}
+
+.user-icon {
+  padding: .7em .2em 0 .7em;
+  font-size: 2.5em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#search-input {
+  width: 30%;
+  border-radius: 10px;
+  height: 6vh;
+  align-self: center;
+  margin: 0 0 0 5%;
+  border: 1px solid gray;
+  padding-left: 1%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#add-photo-btn {
+  width: 13%;
+  height: 5vh;
+  border: none;
+  background-color: rgb(66, 174, 66);
+  align-self: center;
+  margin-left: 34%;
+  box-shadow: 2px 2px 2px 2px rgb(66, 174, 66);
+}
+
+.display-img {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  padding: 1%;
+  background-color: rgb(204, 182, 224)
+}
+
+.display-img .container {
+  width: 30%;
+  position: relative;
+
+  /* margin: 2%; */
+}
+
+img {
+  width: 100%;
+  height: 40vh;
+  margin: 2%;
+}
+
+/* label{
+  display: inline-block;
+} */
+input {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  padding-left: 2%;
+
+}
+
+.submit {
+  width: 15%;
+  margin: .5% 1% .5% 1%;
+  background-color: rgb(66, 174, 66);
+}
+
+.cancel {
+  width: 15%;
+  margin: .5% 1% .5% 1%;
+  background-color: white;
+  border: none;
+}
+
+fieldset {
+  padding: 2%;
+}
+
+fieldset div {
+  margin: 2%
+}
+
+#sub-cancel {
+  display: flex;
+  justify-content: flex-end;
+  /* float: right; */
+}
+
+.label-div {
+  display: none;
+}
+
+.container:hover .img-div {
+  display: none;
+}
+
+.container:hover .label-div {
+  display: flex;
+}
+
+.delete-btn {
+  position: absolute;
+  width: 28%;
+  height: 5vh;
+  right: 13%;
+  top: 7%;
+  background-color: rgb(128, 27, 27);
+  border: none;
+  color: aliceblue;
+
+
+}
+#dlt-file{
+  opacity: .4;
+}
+.label-div h3 {
+  position: absolute;
+  /* width: 24%; */
+  left: 30%;
+  text-align: center;
+  bottom: 7%;
+  color: rgb(18, 12, 12);
+  font-weight: 700;
+  /* font-size: large; */
 }

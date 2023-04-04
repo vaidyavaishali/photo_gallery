@@ -14,7 +14,7 @@ function App() {
   const [prompt, setPrompt] = useState(false)
   const [inp, setIn] = useState("")
   useEffect(() => {
-    axios.get("http://localhost:8000/gallery").then((res) => {
+    axios.get("https://photo-gallery-backend-eyle.onrender.com/gallery").then((res) => {
       setdata(res.data.photos.reverse())
     }).catch(e => {
       console.log(e)
@@ -22,7 +22,7 @@ function App() {
   }, [data])
 
   const FormSubmit = (e) => {
-    axios.post("http://localhost:8000/addphoto", input).then((res) => {
+    axios.post("https://photo-gallery-backend-eyle.onrender.com/addphoto", input).then((res) => {
       if (res.status === 200) {
         setmodel(!model)
       }
@@ -31,7 +31,7 @@ function App() {
 
   const Handle_Delete = (e) => {
     e.preventDefault()
-    axios.delete(`http://localhost:8000/delete/${id}`).then((res) => {
+    axios.delete(`https://photo-gallery-backend-eyle.onrender.com/delete/${id}`).then((res) => {
       if (res.status === 200) {
         console.log("deleted successfully")
       }
